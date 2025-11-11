@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+
 using namespace std;
 
 
@@ -12,6 +14,8 @@ long long func_sequencia_metodo_recursivo(long long n) {
 }
 
 int main() {
+    auto inicio = chrono::high_resolution_clock::now();
+    
     long long maior_numero = 0;
     long long maior_tamanho = 0;
 
@@ -25,6 +29,12 @@ int main() {
 
     cout << "Numero com maior sequencia (recursivo): " << maior_numero << endl;
     cout << "Tamanho da sequencia: " << maior_tamanho << endl;
+
+    auto fim = chrono::high_resolution_clock::now();
+
+    chrono::duration<double> duracao = fim - inicio;
+    cout << "Tempo: " << duracao.count() << " segundos\n";
+
 
     return 0;
 }
