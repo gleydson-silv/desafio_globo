@@ -39,8 +39,6 @@ int main() {
             maior_numero = i;
         }
     }
-
-    cout << "VERSAO HASH (Vetor)" << endl;
     cout << "Numero: " << maior_numero << endl;
     cout << "Tamanho da sequencia: " << maior_tamanho << endl;
 
