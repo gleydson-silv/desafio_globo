@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+
 using namespace std;
 
 long long func_sequencia_metodo_trivial(long long n) {
