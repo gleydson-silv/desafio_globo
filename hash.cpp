@@ -12,18 +12,18 @@ long long funcao_hash(long long n) {
     if (n < max_cache && cache[n] != 0)
         return cache[n];
 
-    long long result;
+    long long resultado;
 
-    if (n == 1) result = 1;
+    if (n == 1) resultado = 1;
     else if (n % 2 == 0)
-        result = 1 + funcao_hash_hash(n / 2);
+        resultado = 1 + funcao_hash_hash(n / 2);
     else
-        result = 1 + funcao_hash(3*n + 1);
+        resultado = 1 + funcao_hash(3*n + 1);
 
     if (n < max_cache)
-        cache[n] = result;
+        cache[n] = resultado;
 
-    return result;
+    return resultado;
 }
 
 int main() {
